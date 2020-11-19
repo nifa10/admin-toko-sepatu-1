@@ -40,6 +40,26 @@
                             <span class="align-middle">Item</span>
                         </a>
                     </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ url('item') }}">
+                            <i class="align-middle" data-feather="item"></i>
+                            <span class="align-middle">Item</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#auth" data-toggle="collapse" class="sidebar-link collapsed">
+                            <i class="align-middle" data-feather="settings"></i>
+                            <span class="align-middle">Settings</span>
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{{ url('/brand') }}">Brand</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{{ url('/category') }}">Category</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>

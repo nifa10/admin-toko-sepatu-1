@@ -41,9 +41,9 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ url('item') }}">
+                        <a class="sidebar-link" href="{{ url('customer') }}">
                             <i class="align-middle" data-feather="item"></i>
-                            <span class="align-middle">Item</span>
+                            <span class="align-middle">Customer</span>
                         </a>
                     </li>
                     <li class="sidebar-item">

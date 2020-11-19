@@ -26,3 +26,7 @@ Route::get('/brand', function () {
 Route::get('/category', function () {
     return view('settings.categories.index');
 });
+
+Route::get('/customer', function () {
+    return view('customers.index');
+});

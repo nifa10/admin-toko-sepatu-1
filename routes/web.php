@@ -19,10 +19,6 @@ Route::get('/item', function () {
     return view('items.index');
 });
 
-Route::get('/order', function () {
-    return view('order.index');
-});
-
 Route::get('/brand', function () {
     return view('settings.brands.index');
 });

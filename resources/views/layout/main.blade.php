@@ -47,12 +47,6 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ url('order') }}">
-                            <i class="align-middle" data-feather="item"></i>
-                            <span class="align-middle">Order</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
                         <a href="#auth" data-toggle="collapse" class="sidebar-link collapsed">
                             <i class="align-middle" data-feather="settings"></i>
                             <span class="align-middle">Settings</span>

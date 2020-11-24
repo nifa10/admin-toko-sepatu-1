@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 100;
   font-display: block;
-  src: url(/fonts/Inter-Thin-BETA.woff2?9e3124cb85516646a4654757c5c2f125) format("woff2"), url(/fonts/Inter-Thin-BETA.woff?93ef2254d41ece1d04166cc29b599458) format("woff");
+  src: url(/fonts/Inter-Thin-BETA.woff2?d41d8cd98f00b204e9800998ecf8427e) format("woff2"), url(/fonts/Inter-Thin-BETA.woff?d41d8cd98f00b204e9800998ecf8427e) format("woff");
 }
 
 @font-face {
@@ -100,7 +100,7 @@
   font-style: italic;
   font-weight: 600;
   font-display: block;
-  src: url(/fonts/Inter-SemiBoldItalic.woff2?f16075d6b7a83fcf59912b1b1aa716e3) format("woff2"), url(/fonts/Inter-SemiBoldItalic.woff?f576c8b25d49a2b711be3760e7be4022) format("woff");
+  src: url(/fonts/Inter-SemiBoldItalic.woff2?d41d8cd98f00b204e9800998ecf8427e) format("woff2"), url(/fonts/Inter-SemiBoldItalic.woff?d41d8cd98f00b204e9800998ecf8427e) format("woff");
 }
 
 @font-face {

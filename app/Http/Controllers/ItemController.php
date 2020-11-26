@@ -14,7 +14,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return view('items.index');
+        $data = Item::all();
+        return view('items.index', compact('data'));
     }
 
     /**
@@ -35,7 +36,8 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Item::create($request->all());
+        return redirect('/item');
     }
 
     /**
@@ -57,7 +59,7 @@ class ItemController extends Controller
      */
     public function edit(Item $item)
     {
-        //
+        return view('items.index', compact('item'));
     }
 
     /**
@@ -69,7 +71,8 @@ class ItemController extends Controller
      */
     public function update(Request $request, Item $item)
     {
-        //
+        $item->update($request->all());
+        return redirect('/item');
     }
 
     /**
@@ -80,6 +83,7 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        $item->delete();
+        return redirect('/item');
     }
 }

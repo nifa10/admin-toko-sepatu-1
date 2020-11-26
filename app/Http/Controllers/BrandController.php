@@ -14,7 +14,8 @@ class BrandController extends Controller
      */
     public function index()
     {
-        return view('settings.brands.index');
+        $data = Brand::all();
+        return view('settings.brands.index', compact('data'));
     }
 
     /**
@@ -35,7 +36,8 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Brand::create($request->all());
+        return redirect('/brand');
     }
 
     /**
@@ -57,7 +59,7 @@ class BrandController extends Controller
      */
     public function edit(Brand $brand)
     {
-        //
+        return view('settings.brands.edit', compact('brand'));
     }
 
     /**
@@ -69,7 +71,8 @@ class BrandController extends Controller
      */
     public function update(Request $request, Brand $brand)
     {
-        //
+        $brand->update($request->all());
+        return redirect('/brand');
     }
 
     /**
@@ -80,6 +83,7 @@ class BrandController extends Controller
      */
     public function destroy(Brand $brand)
     {
-        //
+        $brand->delete();
+        return redirect('/brand');
     }
 }

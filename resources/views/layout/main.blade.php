@@ -10,11 +10,11 @@
     <meta name="keywords"
         content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web" />
 
-    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+    <link rel="shortcut icon" href="{{ asset('img/icons/icon-48x48.png') }}" />
 
     <title>@yield('title')</title>
 
-    <link href="css/app.css" rel="stylesheet" />
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
 </head>
 
 <body>
@@ -197,7 +197,7 @@
         </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

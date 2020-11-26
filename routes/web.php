@@ -15,18 +15,8 @@ Route::get('/', function () {
     return view('dashboard.index');
 });
 
-Route::get('/item', function () {
-    return view('items.index');
-});
-
-Route::get('/brand', function () {
-    return view('settings.brands.index');
-});
-
-Route::get('/category', function () {
-    return view('settings.categories.index');
-});
-
-Route::get('/customer', function () {
-    return view('customers.index');
-});
+Route::resource('customer', 'CustomerController');
+Route::resource('item', 'ItemController');
+Route::resource('brand', 'BrandController');
+Route::resource('category', 'CategoryController');
+Route::resource('order', 'OrderController');

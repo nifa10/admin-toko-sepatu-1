@@ -19,42 +19,39 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($data as $d)
             <tr>
-                <td>1</td>
-                <td>Muhammad Ridwan</td>
-                <td>nubitol45@gmail.com</td>
+                <td>{{ $loop->index+1 }}</td>
+                <td>{{ $d->name }}</td>
+                <td>{{ $d->user->email }}</td>
                 <td class="table-action">
-                    {{-- <a href="#"><i class="align-middle" data-feather="trash"></i></a> --}}
-                    <a href="#"><i class="fa fa-trash"></i></a>
+                    <button class="btn" data-toggle="modal" data-target="#deleteModal"><i
+                            class="fa fa-trash"></i></button>
+                    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Delete Data Brand</h5>
+                                    <button type="button" class="btn-close" data-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body m-3">
+                                    <p class="mb-0">Apakah anda yakin ingin menghapusnya ?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <form action="{{ route('brand.destroy', $d->id) }}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger">DELETE</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Maulida Hanifa</td>
-                <td>maulidahanifa@gmail.com</td>
-                <td class="table-action">
-                    {{-- <a href="#"><i class="align-middle" data-feather="trash"></i></a> --}}
-                    <a href="#"><i class="fa fa-trash"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Mukti Bakis</td>
-                <td>muktibakis@gmail.com</td>
-                <td class="table-action">
-                    {{-- <a href="#"><i class="align-middle" data-feather="trash"></i></a> --}}
-                    <a href="#"><i class="fa fa-trash"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Ezza Bregas</td>
-                <td>ezzabregas@gmail.com</td>
-                <td class="table-action">
-                    {{-- <a href="#"><i class="align-middle" data-feather="trash"></i></a> --}}
-                    <a href="#"><i class="fa fa-trash"></i></a>
-                </td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
